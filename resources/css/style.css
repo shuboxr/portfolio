@@ -2,3 +2,15 @@
     margin: 0;
     padding: 0;
 }
+
+#spaghetti {
+    display: flex;
+}
+
+#fargo {
+    display: none;
+}
+
+#pretty {
+    display: none;
+}
