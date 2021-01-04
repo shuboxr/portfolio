@@ -3,55 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="resources/css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="resources/js/script.js"></script>
     <title>mikeshuster</title>
 </head>
 <body>
 
     <!--HEADER-->
     <header>
-        <nav>
+        <p class="links"><a onclick="swapPanel('about')" href="#">ABOUT</a></p>
+        <p class="links" id="mobile-nav"><a onclick="swapPanel('nav')" href="#">PROJECTS</a></p>
+        <nav id="nav">
             <ul>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
+                <li><a onclick="swapPanel(1)" class="nav-item" href="#">1</a></li>
+                <li><a onclick="swapPanel(2)" class="nav-item" href="#">2</a></li>
+                <li><a onclick="swapPanel(3)" class="nav-item" href="#">3</a></li>
             </ul>
         </nav>
+        <p class="links"><a onclick="swapPanel('contact')" href="#">CONTACT</a></p>
     </header>
 
     <!--MAIN-->
     <main>
 
+        <div onclick="swapPanel(0)" id="veil"></div>
+
+        <!--MOBILE NAV DROPDOWN-->
+        <aside id="nav-dropdown">
+            <nav>
+                <ul>
+                    <li><a onclick="swapPanel(1)" class="nav-item" href="#">1</a></li>
+                    <li><a onclick="swapPanel(2)" class="nav-item" href="#">2</a></li>
+                    <li><a onclick="swapPanel(3)" class="nav-item" href="#">3</a></li>
+                </ul>
+            </nav>
+        </aside>
+
         <!--ABOUT-->
         <aside id="about">
-            <img src="resources/images/me.jpg" alt="" />
+            <div class="image-container">
+                <img src="resources/images/me.jpg" alt="" />
+            </div>
+            <p>Mike J. Shuster is a web developer based out of Cambridge, Massachusetts. Skills include: HTML 5, CSS 3, JS, Node, NPM, Git, GitHub, Terminal, Chrome, DevTools + more!</p>
         </aside>
 
         <!--CONTACT-->
         <aside id="contact">
-            <p>You can reach me at my email address: <email>mk.j.shu@gmail.com</email></p>
+            <p>You can reach me at my email address: <a href="mailto:mk.j.shu@gmail.com">mk.j.shu@gmail.com</a></p>
+            <p>I'm also on <a href="https://github.com/shuboxr">GitHub</a>!</p>
         </aside>
 
         <!--1 SPAGHETTI CLUB-->
         <article id="spaghetti">
-            <img src="resources/images/spaghetticlub.jpg" alt="" />
+            <div class="image-container">
+                <img src="resources/images/spaghetticlub.jpg" alt="" />
+            </div>
+            <h2>The Spaghetti Club</h2>
+            <p class="links"><a target="_blank" href="https://shuboxr.github.io/spaghetticlub">site</a><a target="_blank" href="https://github.com/shuboxr/spaghetticlub">github</a></p>
+            <p class="description">I made this as an example of a "club webpage" during my Codecademy exercises. Reaching into the depths of my psyche for inspiration, I crafted what ended up being less of a club advertisement and more... propaganda. It was built to 1) have several sections with varied content presentation and 2) adapt to multiple screen sizes. 12/21/2020</p>
         </article>
 
         <!--2 FARGO-->
         <article id="fargo">
-            <img src="resources/images/fargo.jpg" alt="" />
+            <div class="image-container">
+                <img src="resources/images/fargo.jpg" alt="" />
+            </div>
+            <h2>Fargo and Chapman, Inc.</h2>
+            <p class="links"><a target="_blank" href="https://shuboxr.github.io/fargoandchapman">site</a><a target="_blank" href="https://github.com/shuboxr/fargoandchapman">github</a></p>
+            <p class="description"> The primary focus of this exercise was the use of flexbox structuring to display several portions of the site. While the company is fake, the flex is real and so are the two media queries that keep everything from looking disgusting when the window shrinks. <span style="color:red">(!) This page uses .webp format images.</span> 12/18/2020</p>
         </article>
 
         <!--3 PRETTY SENTENCE GENERATOR-->
         <article id="pretty">
-            <img src="resources/images/pretty_sentence_ generator.jpg" alt="" />
+            <div class="image-container">
+                <img src="resources/images/pretty_sentence_ generator.jpg" alt="" />
+            </div>
+            <h2>Pretty Sentence Generator (Circumlocution Simulator)</h2>
+            <p class="links"><a target="_blank" href="https://github.com/shuboxr/pretty-sentence-generator">github</a></p>
+            <p class="description"> My first "Portfolio Project" for Codecademy, I was to use random number generation to produce novel text each time the program was run. I tried to cram a bunch of unusual words into slightly varied, technically grammatically correct sentence structures. Fun to say, hard to parse. 12/2/2020</p>
         </article>
         
     </main>
 
-    <!--FOOTER-->
-    <footer>
-
-    </footer>
 </body>
 </html>
