@@ -1,3 +1,6 @@
+//refactor to make adding more projects non-exponentially more difficult
+//also remove "onclick" from HTML and add event handlers here
+
 function swapPanel (panel) {
 
     if (typeof panel === "number") {
