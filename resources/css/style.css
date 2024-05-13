@@ -194,6 +194,10 @@ aside {
     display: none;
 }
 
+#reduceddit {
+    display: none;
+}
+
 #veil {
     display: none;
     position: absolute;

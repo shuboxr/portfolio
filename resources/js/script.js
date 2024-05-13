@@ -1,5 +1,6 @@
 //refactor to make adding more projects non-exponentially more difficult
 //also remove "onclick" from HTML and add event handlers here
+//and... remove individual default 'display: none' declarations from CSS for each project panel...
 
 function swapPanel (panel) {
 
@@ -16,16 +17,25 @@ function swapPanel (panel) {
             document.getElementById("spaghetti").style.display = "flex";
             document.getElementById("fargo").style.display = "none";
             document.getElementById("pretty").style.display = "none";
+            document.getElementById("reduceddit").style.display = "none";
             break;
         case 2:
             document.getElementById("spaghetti").style.display = "none";
             document.getElementById("fargo").style.display = "flex";
             document.getElementById("pretty").style.display = "none";
+            document.getElementById("reduceddit").style.display = "none";
             break;
         case 3:
             document.getElementById("spaghetti").style.display = "none";
             document.getElementById("fargo").style.display = "none";
             document.getElementById("pretty").style.display = "flex";
+            document.getElementById("reduceddit").style.display = "none";
+            break;
+        case 4:
+            document.getElementById("spaghetti").style.display = "none";
+            document.getElementById("fargo").style.display = "none";
+            document.getElementById("pretty").style.display = "none";
+            document.getElementById("reduceddit").style.display = "flex";
             break;
         case 'about':
             document.getElementById("contact").style.display = "none";
